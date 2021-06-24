@@ -1,0 +1,22 @@
+# MAKE SURE TO LEAVE THE DENY LIST AT THE TOP OF THE FILE !!!
+# BEGIN DENY LIST --
+# END DENY LIST --
+
+# MAKE SURE TO LEAVE THE DENY LIST AT THE TOP OF THE FILE !!!
+# BEGIN DENY LIST --
+# END DENY LIST --
+
+RewriteEngine On
+# RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.ppdb.smkn1kabsorong\.sch.id$ [NC]
+RewriteRule ^ https://ppdb.smkn1kabsorong.sch.id%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{THE_REQUEST} ^[A-Z]+\ /index\.php(/[^\ ]*)?\ HTTP/ 
+RewriteRule ^index\.php(/(.*))?$ smkn1kabsorong.sch.id/$2 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
