@@ -144,7 +144,7 @@
                                         <!--    </li>-->
 
                                         <!--</small>-->
-                                        <p class="text-center" style="font-size:30px; "><strong>Pendaftaran Telah di buka. <a href="https://ppdb.smkn1kabsorong.sch.id/pendaftaran">Klik di Sini!</a></strong></p>
+                                        <p class="text-center" style="font-size:30px; "><strong>Pendaftaran Telah ditutup, cek informasi selanjutnya. <a href="https://smkn1kabsorong.sch.id/informasi-ppdb-2021/">di Sini!</a></strong></p>
                                     </td>
                                 </tr>
                             </table>

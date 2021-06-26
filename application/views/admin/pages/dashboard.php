@@ -92,13 +92,15 @@
         <div class="box-body pad">
           <div class="row">
             <div class="col-xs-6">
-              <div class="info-box bg-red">
+              <div class="info-box" style="background-color: #DD4B39;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countAkl ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
-                    <h3>Akuntansi dan Keuangan Lembaga</h3>
+                    <h3>
+                      <marquee>Akuntansi dan Keuangan Lembaga</marquee>
+                    </h3>
                   </span>
                   <!-- <span class="info-box-number">41,410</span> -->
 
@@ -112,13 +114,15 @@
             </div>
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box bg-yellow">
+              <div class="info-box" style="background-color: #F39C12;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countOtkp ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
-                    <h3>Otomatisasi dan Tata Kelola Perkantoran</h3>
+                    <h3>
+                      <marquee>Otomatisasi dan Tata Kelola Perkantoran</marquee>
+                    </h3>
                   </span>
                   <!-- <span class="info-box-number">41,410</span> -->
 
@@ -136,13 +140,15 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box bg-green">
+              <div class="info-box" style="background-color: #00A65A;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countDpib ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
-                    <h3> Pemodelan dan Informasi Bangunan</h3>
+                    <h3>
+                      <marquee>Pemodelan dan Informasi Bangunan</marquee>
+                    </h3>
                   </span>
                   <!-- <span class="info-box-number">41,410</span> -->
                   <!-- 
@@ -160,13 +166,15 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box bg-purple">
+              <div class="info-box" style="background-color: #605CA8;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTkj ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
-                    <h3>Teknik Komputer dan Jaringan</h3>
+                    <h3>
+                      <marquee>Teknik Komputer dan Jaringan</marquee>
+                    </h3>
                   </span>
                   <!-- <span class="info-box-number">41,410</span> -->
 
@@ -184,13 +192,15 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box bg-blue">
+              <div class="info-box" style="background-color: #0073B7;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTkro ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
-                    <h3>Teknik Kendaraan Ringan Otomotif</h3>
+                    <h3>
+                      <marquee>Teknik Kendaraan Ringan Otomotif</marquee>
+                    </h3>
                   </span>
                   <!-- <span class="info-box-number">41,410</span> -->
 
@@ -208,13 +218,15 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box bg-orange">
+              <div class="info-box" style="background-color: #8AA4AF;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTitl ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
-                    <h3>Teknik Instalasi Tenaga Listrik</h3>
+                    <h3>
+                      <marquee>Teknik Instalasi Tenaga Listrik</marquee>
+                    </h3>
                   </span>
                   <!-- <span class="info-box-number">41,410</span> -->
                   <!-- 
@@ -232,13 +244,15 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box bg-default">
+              <div class="info-box" style="background-color: #D81B60;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTbsm ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
-                    <h3>Teknik dan Bisnis Sepeda Motor</h3>
+                    <h3>
+                      <marquee>Teknik dan Bisnis Sepeda Motor</marquee>
+                    </h3>
                   </span>
                   <!-- <span class="info-box-number">41,410</span> -->
 

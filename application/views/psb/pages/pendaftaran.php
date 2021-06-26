@@ -107,12 +107,17 @@
             <div class="col-md-6">
                 <?php
                 if ($bt->bool == 1) { ?>
-                    <div class="p-b-20 alert bgm-orange f-wht">Pendaftaran Belum Dibuka</div>
-                <?php } else { ?>
+                    <div class="p-b-20 alert bgm-orange f-wht">Ayo Mendaftar di SMK!</div>
+                    <a href="<?= site_url('daftar/siswa') ?>" id="daftar" class="btn btn-mts btn-block">Daftar</a>
+                <?php }
+                if ($bt->bool == 0) { ?>
                     <div class="p-b-20 alert bgm-orange f-wht">Pendaftaran Sudah ditutup</div>
-
+                    <a href="#" id="daftar" class="btn btn-mts btn-block disabled">Kuota Sudah Penuh!</a>
+                <?php }
+                if ($bt->bool == 2) { ?>
+                    <div class="p-b-20 alert bgm-orange f-wht">Pendaftaran Belum Dibuka</div>
+                    <a href="#" id="daftar" class="btn btn-mts btn-block disabled">Tunggu tahun depan ya...</a>
                 <?php } ?>
-                <a href="<?= site_url('daftar/siswa') ?>" id="daftar" class="btn btn-mts btn-block <?= $bt->bool == 1 ? 'disabled' : 1 ?> ">Pendaftaran dibuka pada tanggal 21 Juni 2021</a>
 
             </div>
         </div>

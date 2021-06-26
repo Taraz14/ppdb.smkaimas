@@ -17,18 +17,14 @@ class Pendaftaran extends MY_Controller
     public function index()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $i = $this->input->post('bool');
-            // var_dump($i);die();
-            $bool = [
-                'bool' => $i
-            ];
+            $i = $this->input->post();
 
-            if ($this->pendaftar_m->btChange($bool, ['bt_id' => $i])) {
+            if ($this->pendaftar_m->btChange($i, ['bt_id' => 1])) {
                 $this->session->set_flashdata('success', 'Tombol berhasil diaktifkan">');
-                redirect('pendaftaran', 'refresh');
+                redirect('admin/aktivasi', 'refresh');
             } else {
                 $this->session->set_flashdata('error', 'Tombol tidak dapat diaktifkan.');
-                redirect('pendaftaran', 'refresh');
+                redirect('admin/aktivasi', 'refresh');
             }
         } else {
             $this->load->view('psb/layouts/index', [
