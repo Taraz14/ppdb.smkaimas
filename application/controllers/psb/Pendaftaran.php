@@ -40,7 +40,8 @@ class Pendaftaran extends MY_Controller
         $this->load->view('psb/layouts/index', [
             'content' => 'psb/pages/form',
             'title' => 'Form Pendaftaran',
-            'jurusan' => $this->pendaftar_m->getJurusan()
+            'jurusan' => $this->pendaftar_m->getJurusan(),
+            'bt' => $this->pendaftar_m->bt()
         ]);
     }
 
