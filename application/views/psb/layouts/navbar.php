@@ -85,13 +85,11 @@
                                     <li class="<?php if ($this->uri->segment(1) == "") {
                                                     echo 'active';
                                                 } ?>"><a href="<?= site_url() ?>"><i class="fa fa-home"></i> Beranda</a></li>
-                                    <!--<li class="<?php if ($this->uri->segment(1) == "pendaftaran") {
-                                                        echo 'active';
-                                                    } ?>"><a href="https://drive.google.com/open?id=1G-3rmy1eHzdpf21BefGOv8ArUGsxeFBB" target="_blank">Pengumuman Kelulusan 2020 (kelas XII)</a></li>-->
+
                                     <li><a href="https://smkn1kabsorong.sch.id/informasi-ppdb-2021/"><i class="fa fa-info"></i> Informasi</a></li>
                                     <li class="<?php if ($this->uri->segment(1) == "pendaftaran") {
                                                     echo 'active';
-                                                } ?>"><a href="<?= site_url('pendaftaran') ?>"><i class="fa fa-registered"></i> Pendaftaran</a></li>
+                                                } ?>"><a href="<?= site_url('pendaftaran') ?>"><i class="fa fa-user-plus"></i> Pendaftaran</a></li>
                                     <li class="dropdown <?php if ($this->uri->segment(1) == "pencarian-data") {
                                                             echo 'active';
                                                         } ?>">

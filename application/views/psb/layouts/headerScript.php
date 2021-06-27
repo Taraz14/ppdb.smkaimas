@@ -68,6 +68,10 @@
   <link href="<?= base_url() ?>assets/landing/css/style.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/landing/css/blog-single.css" rel="stylesheet">
   <link href="<?= base_url() ?>assets/landing/css/responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/5b43112/dist/css/AdminLTE.min.css">
+
+  <link rel="stylesheet" href="<?= base_url(); ?>assets/5b43112/dist/css/skins/_all-skins.min.css">
+
   <!-- Date Picker -->
   <link rel="stylesheet" href="<?= base_url(); ?>assets/5b43112/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 

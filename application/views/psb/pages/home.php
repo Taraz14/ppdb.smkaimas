@@ -95,7 +95,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Selamat Datang di Halaman<br /><span>PENERIMAAN PESERTA DIDIK BARU (PPDB) 2021</span></h1>
+                    <h1>Selamat Datang di Halaman<br /><span>PENERIMAAN PESERTA DIDIK BARU (PPDB) <?= date('Y', time()) ?></span></h1>
 
                 </div>
             </div>
@@ -108,19 +108,21 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+
+            <div class="col-md-8" style="background-color:#F7F7F9 ;">
+                <h1>Tata Cara Masuk Ke Ujian Seleksi</h1>
+                <ul class="">
+                    <!-- <ol type=">"> -->
+                    <li>Klik pada menu Cari Data</li>
+                    <li>Masukkan NISN</li>
+                    <li>Tekan Enter/klik tombol cari</li>
+                    <li>Klik Pada Tombol Mulai Ujian yang berwarna "Biru Gelap" untuk memulai ujian</li>
+                    <!-- </ol> -->
+                </ul>
+                <hr />
                 <img src="<?= base_url('assets/image/ppdb/ppdb_beranda.png') ?>" class="daftar-thumb" style="max-width:100%;">
             </div>
-            <!--<div class="col-md-12">-->
-            <!--    <img src="<?= base_url('assets/image/ppdb/brosur/Brosur1.png') ?>" class="daftar-thumb" style="max-width:100%;">    -->
-            <!--</div>-->
-            <!--<div class="col-md-12">-->
-            <!--    <img src="<?= base_url('assets/image/ppdb/brosur/Brosur2.png') ?>" class="daftar-thumb" style="max-width:100%;">    -->
-            <!--</div>-->
-            <!-- <div class="col-md-6">
-                <div class="p-b-20 alert bgm-orange f-wht">Klik tombol daftar untuk masuk ke halaman formulir dan mendaftar sebagai siswa baru</div>
-                <a href="<?= site_url('daftar/siswa') ?>" class="btn btn-mts btn-block">Daftar</a>
-            </div> -->
+
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -130,7 +132,7 @@
                                 <tr style="color:white;">
                                     <td class="text-center" style="background-color:#024380;" colspan="2"><i class="fa fa-info"></i> <strong>Informasi Pendaftaran</strong></td>
                                 </tr>
-                                <tr style="background-color:#D5E7C6">
+                                <tr style="background-color:#F7F7F9">
                                     <td>
                                         <!--<div class="p-b-20 alert bgm-orange f-wht text-center"><p class="muted"><strong><i class="fa fa-exclamation-triangle"></i> Harap dibaca </strong></p>-->
                                         <!--</div>-->
