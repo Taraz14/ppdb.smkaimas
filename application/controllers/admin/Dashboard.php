@@ -24,6 +24,8 @@ class Dashboard extends MY_Controller
             'guru' => $this->admin_m->count_all(),
             'berita' => $this->blog_m->countAll(),
             'pendaftar' => $this->pendaftar_m->countAll(),
+            'tes' => $this->pendaftar_m->is_tested(),
+            'no_tes' => $this->pendaftar_m->no_tested(),
             'acc' => $this->admin_m->countAcc(),
             'tested' => $this->test_online_m->test(),
             'countAkl' => $this->admin_m->countAkl(),

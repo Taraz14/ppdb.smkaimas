@@ -246,6 +246,24 @@ class Pendaftar_m extends MY_Model
         return $this->db->count_all_results();
     }
 
+    public function is_tested()
+    {
+        $this->db->from($this->calon);
+        $this->db->where('nilai >', 0);
+        // $this->db->where('nilai', );
+        return $this->db->count_all_results();
+    }
+
+    public function no_tested()
+    {
+        $this->db->from($this->calon);
+        $this->db->group_start()
+            ->where('nilai <=', 0)
+            ->or_where('nilai', NULL);
+        $this->db->group_end();
+        return $this->db->count_all_results();
+    }
+
     public function getJurusan()
     {
         return $this->db->get('jurusan')->result();
