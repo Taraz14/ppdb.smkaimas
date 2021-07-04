@@ -218,6 +218,13 @@
                     <div class="col-md-12"> -->
 
             <?php if ($cari->num_rows() <= 0) {
+
+                                    $cari2x = $cari2->row();
+                                    if ($cari2x->cadangkan == 1 && $cari3->num_rows() > 0) {
+                                        foreach ($cari3->result() as $cadang) {
+                                        }
+                                    } else {
+                                    }
                                     foreach ($cari2->result() as $val) :
             ?>
                     <table class="table table-bordered">
@@ -260,25 +267,54 @@
                             <td>
                                 <?php
                                         if ($val->jurusan1 == "Akuntansi dan Keuangan Lembaga") {
-                                            echo "<a href='https://forms.gle/kfj3QVPiw22JT9KTA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            if (!empty($val->nilai)) {
+                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                            } else {
+                                                echo "<a href='https://forms.gle/kfj3QVPiw22JT9KTA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            }
                                         }
                                         if ($val->jurusan1 == "Otomatisasi dan Tata Kelola Perkantoran") {
-                                            echo "<a href='https://forms.gle/hYwZV18TPzw45eEH9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            if (!empty($val->nilai)) {
+                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                            } else {
+                                                echo "<a href='https://forms.gle/hYwZV18TPzw45eEH9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            }
                                         }
                                         if ($val->jurusan1 == "Desain Pemodelan dan Informasi Bangunan") {
-                                            echo "<a href='https://forms.gle/UBe6ab7ALRFjARCR9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            if (!empty($val->nilai)) {
+                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                            } else {
+                                                echo "<a href='https://forms.gle/UBe6ab7ALRFjARCR9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            }
                                         }
                                         if ($val->jurusan1 == "Teknik Komputer dan Jaringan") {
-                                            echo "<a href='https://forms.gle/XnDJjJShHuxpPMfWA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            if (!empty($val->nilai)) {
+                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                            } else {
+
+                                                echo "<a href='https://forms.gle/XnDJjJShHuxpPMfWA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            }
                                         }
                                         if ($val->jurusan1 == "Teknik Kendaraan Ringan Otomotif") {
-                                            echo "<a href='https://forms.gle/a9wygs1T9nopM5729' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            if (!empty($val->nilai)) {
+                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                            } else {
+                                                echo "<a href='https://forms.gle/a9wygs1T9nopM5729' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            }
                                         }
                                         if ($val->jurusan1 == "Teknik Instalasi Tenaga Listrik") {
-                                            echo "<a href='https://forms.gle/RhekyP52K6suz6uh9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            if (!empty($val->nilai)) {
+                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                            } else {
+                                                echo "<a href='https://forms.gle/RhekyP52K6suz6uh9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            }
                                         }
                                         if ($val->jurusan1 == "Teknik dan Bisnis Sepeda Motor") {
-                                            echo "<a href='https://forms.gle/AMpYsqU4QDYqCARZ9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            if (!empty($val->nilai)) {
+                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                            } else {
+                                                echo "<a href='https://forms.gle/AMpYsqU4QDYqCARZ9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                            }
                                         }
                                 ?>
                             </td>

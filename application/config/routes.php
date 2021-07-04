@@ -16,6 +16,7 @@ $route['admin/berita/u/(:any)'] = 'admin/Forum/upload/$1';
 $route['admin/berita/d/(:any)'] = 'admin/Forum/delete/$1';
 $route['admin/aktivasi'] = 'admin/Active';
 $route['admin/kelas'] = 'admin/kelas/kelas';
+$route['admin/cadangkan/(:any)'] = 'admin/cadangan/index/$1';
 
 //PPDB
 $route['admin/psb'] = 'admin/Psb';

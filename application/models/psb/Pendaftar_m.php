@@ -211,6 +211,7 @@ class Pendaftar_m extends MY_Model
             $this->db->or_like('agama', $this->input->get('search')['value']);
             $this->db->or_like('kewarganegaraan', $this->input->get('search')['value']);
             $this->db->or_like('asal_sekolah', $this->input->get('search')['value']);
+            $this->db->or_like('cadangkan', $this->input->get('search')['value']);
             // $this->db->or_like('nem', $this->input->get('search')['value']);
             // $this->db->or_like('ibu_kandung', $this->input->get('search')['value']);
         }

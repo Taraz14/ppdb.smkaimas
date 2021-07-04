@@ -6,6 +6,7 @@ class Pencarian_m extends MY_Model
 
     private $cari = 'accepted';
     private $cari2 = 'psb';
+    private $cari3 = 'cadangan';
 
     public function searchData($nisn)
     {
@@ -21,6 +22,15 @@ class Pencarian_m extends MY_Model
         return $this->db->get_where($this->cari2, array('nisn' => $nisn));
     }
 
+    public function searchDataCadangan($nisn)
+    {
+        $this->db->select('*');
+        $this->db->from('cadangan c');
+        $this->db->join('psb p', 'c.psb_id = p.psb_id', 'inner');
+        $this->db->where('p.nisn', $nisn);
+        return $this->db->get();
+        // return $this->db->get_where($this->cari3, array('nisn' => $nisn));
+    }
 
     public function updateTest($test, $id)
     {
