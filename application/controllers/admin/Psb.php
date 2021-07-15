@@ -67,7 +67,7 @@ class Psb extends MY_Controller
             $temp[] = htmlspecialchars($psbVal->tahun_lulus, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->jalur, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->nilai, ENT_QUOTES, 'UTF-8');
-            if ($psbVal->is_tested == 0) {
+            if (empty($psbVal->nilai)) {
                 $temp[] = '<i class="fa fa-times" style="color:red"></i> Belum Ujian';
             } else {
                 $temp[] = '<i class="fa fa-check" style="color:green"></i> Sudah Ujian';

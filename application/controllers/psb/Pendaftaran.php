@@ -9,7 +9,7 @@ class Pendaftaran extends MY_Controller
         parent::__construct();
         //Do your magic here
         $this->load->helper(array('form', 'file'));
-        $this->load->library('form_validation');
+        $this->load->library(array('form_validation', 'encryption'));
         $this->lang->load('form_validation', 'english');
         $this->load->model('psb/pendaftar_m');
     }

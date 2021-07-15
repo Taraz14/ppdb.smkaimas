@@ -113,10 +113,10 @@
                 <h1>Tata Cara Masuk Ke Ujian Seleksi</h1>
                 <ul class="">
                     <!-- <ol type=">"> -->
-                    <li>Klik pada menu Cari Data</li>
-                    <li>Masukkan NISN</li>
-                    <li>Tekan Enter/klik tombol cari</li>
-                    <li>Klik Pada Tombol Mulai Ujian yang berwarna "Biru Gelap" untuk memulai ujian</li>
+                    <li>Pilih "<i class="glyphicon glyphicon-search"></i> CARI DATA" pada menu (jika menggunakan HP, pilih <i class="glyphicon glyphicon-menu-hamburger"></i> strip 3 di pojok kanan atas lalu pilih "<i class="glyphicon glyphicon-search"></i> CARI DATA")</li>
+                    <li>Masukkan NISN yang digunakan pada saat mendaftar</li>
+                    <li>Tekan Enter/pilih tombol cari</li>
+                    <li>Pilih Pada Tombol "Mulai Ujian Tes Seleksi" yang berwarna "Biru Gelap" untuk memulai ujian</li>
                     <!-- </ol> -->
                 </ul>
                 <hr />
