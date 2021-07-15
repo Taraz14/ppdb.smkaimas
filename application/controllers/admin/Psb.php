@@ -41,8 +41,27 @@ class Psb extends MY_Controller
         $psb = [];
         foreach ($data as $psbVal) {
             $temp = [];
-            $temp[] = htmlspecialchars($psbVal->nomor_pendaftar, ENT_QUOTES, 'UTF-8');
-            $temp[] = '<div class="uppercase">' . htmlspecialchars($psbVal->nama_lengkap, ENT_QUOTES) . '</div>';
+
+            $temp[] = ' 
+                
+                <a href="' . site_url('admin/psb/u/nilai/') . $psbVal->psb_id . '" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="right" title="Edit">
+                <i class="glyphicon glyphicon-pencil" style="color:#FFBE00"></i>
+            </a>
+            <a href="' . site_url('admin/psb/detail/') . $psbVal->psb_id . '" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="right" title="Detail" target="">
+                <i class="glyphicon glyphicon-eye-open" style="color:#009B29"></i>
+            </a>
+            <a href="javascript:void(0)" onclick="cadangkan(' . "'" . $psbVal->psb_id . "'" . ')" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="right" title="Cadangkan" target="">
+                <i class="glyphicon glyphicon-user" style="color:#C800FF"></i>
+            </a>';
+
+            if ($psbVal->cadangkan == 1) {
+                $temp[] = '<div style="color:red">' . htmlspecialchars($psbVal->nomor_pendaftar, ENT_QUOTES, 'UTF-8') . '</div>';
+                $temp[] = '<div class="uppercase" style="color:red">' . htmlspecialchars($psbVal->nama_lengkap, ENT_QUOTES) . '</div>';
+            } else {
+                $temp[] = htmlspecialchars($psbVal->nomor_pendaftar, ENT_QUOTES, 'UTF-8');
+                $temp[] = '<div class="uppercase">' . htmlspecialchars($psbVal->nama_lengkap, ENT_QUOTES) . '</div>';
+            }
+
             $temp[] = htmlspecialchars($psbVal->nisn, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->tempat_lahir . ', ' . tanggal($psbVal->tanggal_lahir), ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->jenis_kelamin, ENT_QUOTES, 'UTF-8');
@@ -67,6 +86,10 @@ class Psb extends MY_Controller
             $temp[] = htmlspecialchars($psbVal->tahun_lulus, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->jalur, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->nilai, ENT_QUOTES, 'UTF-8');
+<<<<<<< HEAD
+=======
+            // $temp[] = htmlspecialchars($psbVal->nilai, ENT_QUOTES, 'UTF-8');
+>>>>>>> e02beb45e7270102cd382dae84cb40bd208ecd72
             if (empty($psbVal->nilai)) {
                 $temp[] = '<i class="fa fa-times" style="color:red"></i> Belum Ujian';
             } else {
@@ -91,12 +114,7 @@ class Psb extends MY_Controller
             //         <i class="glyphicon glyphicon-trash" style="color:#FF2700"></i>
             //     </a>
             //   ';
-            $temp[] = ' <a href="' . site_url('admin/psb/u/nilai/') . $psbVal->psb_id . '" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit">
-                <i class="glyphicon glyphicon-pencil" style="color:#FFBE00"></i>
-            </a>
-            <a href="' . site_url('admin/psb/detail/') . $psbVal->psb_id . '" class="btn btn-default btn-sm" data-toggle="tooltip" title="Detail" target="">
-                <i class="glyphicon glyphicon-eye-open" style="color:#009B29"></i>
-            </a>';
+
             $psb[] = $temp;
         }
 

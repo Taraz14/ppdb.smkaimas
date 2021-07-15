@@ -86,7 +86,7 @@
                                                     echo 'active';
                                                 } ?>"><a href="<?= site_url() ?>"><i class="fa fa-home"></i> Beranda</a></li>
 
-                                    <li><a href="https://smkn1kabsorong.sch.id/informasi-ppdb-2021/"><i class="fa fa-info"></i> Informasi</a></li>
+                                    <li><a href="https://smkn1kabsorong.sch.id/sk-hasil-ppdb-2021/"><i class="fa fa-info"></i> Pengumuman</a></li>
                                     <li class="<?php if ($this->uri->segment(1) == "pendaftaran") {
                                                     echo 'active';
                                                 } ?>"><a href="<?= site_url('pendaftaran') ?>"><i class="fa fa-user-plus"></i> Pendaftaran</a></li>

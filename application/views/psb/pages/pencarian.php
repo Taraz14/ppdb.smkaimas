@@ -218,6 +218,13 @@
                     <div class="col-md-12"> -->
 
             <?php if ($cari->num_rows() <= 0) {
+
+                                    $cari2x = $cari2->row();
+                                    if ($cari2x->cadangkan == 1 && $cari3->num_rows() > 0) {
+                                        foreach ($cari3->result() as $cadang) {
+                                        }
+                                    } else {
+                                    }
                                     foreach ($cari2->result() as $val) :
             ?>
                     <table class="table table-bordered">

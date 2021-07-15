@@ -14,6 +14,7 @@
           <table class="table table-bordered table-hover display nowrap" width="100%" id="arsip">
             <thead>
               <tr>
+                <th>#</th>
                 <th>No. Pendaftar</th>
                 <th>Nama Lengkap</th>
                 <th>NISN</th>
@@ -40,10 +41,13 @@
                 <th>Suku</th>
                 <th>Nilai</th>
                 <th>Keterangan</th>
-                <th>#</th>
+                <!-- <th>Cadangkan</th> -->
               </tr>
             </thead>
           </table>
+          <form action="#" method="post" id="form-user">
+            <input type="hidden" name="uid" value="<?= $auth_user_id; ?>">
+          </form>
         </div>
       </div>
     </div>
@@ -52,6 +56,11 @@
 <!-- /.content -->
 <script>
   var arsip;
+
+  function reload_table() {
+    arsip.ajax.reload(null, false); //reload datatable ajax 
+  }
+
   $(function() {
     //Datatable : AKL -> Admin
     arsip = $('#arsip').DataTable({
@@ -65,7 +74,7 @@
         url: '<?= site_url('admin/psb/getPsb') ?>',
       },
       "columnDefs": [{
-        "targets": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+        "targets": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
         "visible": false,
         "searchable": false
       }],
@@ -83,4 +92,50 @@
       lengthMenu: [10, 20, 50, 100, 200, 500],
     });
   })
+
+  function cadangkan(id) {
+    swal({
+        title: "Cadangkan siswa ini?",
+        text: "Siswa akan dicadangkan!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((result) => {
+        if (result) {
+          var uid = new FormData($('#form-user')[0]);
+          $.ajax({
+            url: "<?= site_url('admin/cadangkan/') ?>" + id,
+            type: "POST",
+            contentType: false,
+            processData: false,
+            dataType: "JSON",
+            data: {
+              id: id,
+              uid: uid
+            },
+            success: function(data) {
+              if (data.status == true) {
+                swal("Sip! Siswa Berhasil dicadangkan!", {
+                  icon: "success",
+                });
+                reload_table();
+              } else if (data.status == false) {
+                swal({
+                  title: 'Gagal',
+                  text: 'Siswa ini sudah dicadangkan',
+                  icon: 'error',
+                  dangerMode: 'true'
+                })
+                reload_table();
+              }
+            }
+          });
+        } else {
+          console.log(id);
+          console.log(uid);
+          swal("Kelas tidak jadi dihapus!");
+        }
+      });
+  }
 </script>

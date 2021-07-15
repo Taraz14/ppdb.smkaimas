@@ -22,8 +22,9 @@ class Pencarian extends MY_Controller
             $this->load->view('psb/layouts/index', [
                 'content' => 'psb/pages/pencarian',
                 'title' => 'Pencarian Data',
-                'cari' => $this->pencarian_m->searchData($nisn),
-                'cari2' => $this->pencarian_m->searchDataMentah($nisn)
+                'cari'  => $this->pencarian_m->searchData($nisn),
+                'cari2' => $this->pencarian_m->searchDataMentah($nisn),
+                'cari3' => $this->pencarian_m->searchDataCadangan($nisn),
             ]);
         } else {
             $this->load->view('psb/layouts/index', [

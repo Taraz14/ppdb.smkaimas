@@ -65,11 +65,27 @@
     <!-- tes online-->
     <div class="col-md-3 col-sm-6 col-xs-12">
       <div class="info-box">
-        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-list-outline"></i></span>
+        <span class="info-box-icon bg-blue"><i class="ion ion-ios-list-outline"></i></span>
 
         <div class="info-box-content">
           <span class="info-box-text">Sudah Tes</span>
-          <span class="info-box-number"><?= $tested; ?></span>
+          <span class="info-box-number">
+            <h3><?= $tes; ?></h3>
+          </span>
+        </div>
+        <!-- /.info-box-content -->
+      </div>
+      <!-- /.info-box -->
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-red"><i class="ion ion-ios-list-outline"></i></span>
+
+        <div class="info-box-content">
+          <span class="info-box-text">Belum Tes</span>
+          <span class="info-box-number">
+            <h3><?= $no_tes; ?></h3>
+          </span>
         </div>
         <!-- /.info-box-content -->
       </div>

@@ -211,6 +211,7 @@ class Pendaftar_m extends MY_Model
             $this->db->or_like('agama', $this->input->get('search')['value']);
             $this->db->or_like('kewarganegaraan', $this->input->get('search')['value']);
             $this->db->or_like('asal_sekolah', $this->input->get('search')['value']);
+            $this->db->or_like('cadangkan', $this->input->get('search')['value']);
             // $this->db->or_like('nem', $this->input->get('search')['value']);
             // $this->db->or_like('ibu_kandung', $this->input->get('search')['value']);
         }
@@ -243,6 +244,24 @@ class Pendaftar_m extends MY_Model
     public function countAll()
     {
         $this->db->from($this->calon);
+        return $this->db->count_all_results();
+    }
+
+    public function is_tested()
+    {
+        $this->db->from($this->calon);
+        $this->db->where('nilai >', 0);
+        // $this->db->where('nilai', );
+        return $this->db->count_all_results();
+    }
+
+    public function no_tested()
+    {
+        $this->db->from($this->calon);
+        $this->db->group_start()
+            ->where('nilai <=', 0)
+            ->or_where('nilai', NULL);
+        $this->db->group_end();
         return $this->db->count_all_results();
     }
 
