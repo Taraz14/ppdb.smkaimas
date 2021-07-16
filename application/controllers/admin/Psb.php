@@ -58,10 +58,15 @@ class Psb extends MY_Controller
                 $temp[] = '<div style="color:red">' . htmlspecialchars($psbVal->nomor_pendaftar, ENT_QUOTES, 'UTF-8') . '</div>';
                 $temp[] = '<div class="uppercase" style="color:red">' . htmlspecialchars($psbVal->nama_lengkap, ENT_QUOTES) . '</div>';
             } else {
+                if ($psbVal->is_accepted == 1) {
+                    $temp[] = htmlspecialchars($psbVal->nomor_pendaftar, ENT_QUOTES, 'UTF-8');
+                    $temp[] = '<div class="uppercase" style="color:blue">' . htmlspecialchars($psbVal->nama_lengkap, ENT_QUOTES) . '</div>';
+                }
                 $temp[] = htmlspecialchars($psbVal->nomor_pendaftar, ENT_QUOTES, 'UTF-8');
                 $temp[] = '<div class="uppercase">' . htmlspecialchars($psbVal->nama_lengkap, ENT_QUOTES) . '</div>';
             }
 
+            $temp[] = htmlspecialchars($psbVal->nik, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->nisn, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->tempat_lahir . ', ' . tanggal($psbVal->tanggal_lahir), ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->jenis_kelamin, ENT_QUOTES, 'UTF-8');
@@ -86,10 +91,7 @@ class Psb extends MY_Controller
             $temp[] = htmlspecialchars($psbVal->tahun_lulus, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->jalur, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($psbVal->nilai, ENT_QUOTES, 'UTF-8');
-<<<<<<< HEAD
-=======
             // $temp[] = htmlspecialchars($psbVal->nilai, ENT_QUOTES, 'UTF-8');
->>>>>>> e02beb45e7270102cd382dae84cb40bd208ecd72
             if (empty($psbVal->nilai)) {
                 $temp[] = '<i class="fa fa-times" style="color:red"></i> Belum Ujian';
             } else {

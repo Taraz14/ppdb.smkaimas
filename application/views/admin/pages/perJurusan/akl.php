@@ -16,6 +16,7 @@
                             <tr>
                                 <th>No. Pendaftar</th>
                                 <th>Nama Lengkap</th>
+                                <th>NIK</th>
                                 <th>NISN</th>
                                 <th>TTL</th>
                                 <th>Jenis Kelamin</th>
@@ -80,7 +81,7 @@
 
                 'csv', 'excel', 'print', 'copy'
             ],
-             pageLength: 10,
+            pageLength: 10,
             lengthMenu: [10, 20, 50, 100, 200, 500],
         });
     })

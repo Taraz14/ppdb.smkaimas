@@ -1,40 +1,42 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Akl extends MY_Controller {
+class Akl extends MY_Controller
+{
 
     public function __construct()
     {
         parent::__construct();
         $this->load->model('perjurusan/akl_m');
-        if(!$this->verify_role('admin')) redirect('auth');
+        if (!$this->verify_role('admin')) redirect('auth');
     }
 
     public function index()
     {
         $this->load->view('layouts/wrapper', [
             'content' => 'admin/pages/perJurusan/akl',
-            'header'=> 'Akuntansi Keuangan Lembaga',
+            'header' => 'Akuntansi Keuangan Lembaga',
         ]);
-        
     }
 
-    public function getJur(){
+    public function getJur()
+    {
         $data = $this->akl_m->dataJur();
         $jur = [];
         foreach ($data as $jurVal) {
             $temp = [];
             $temp[] = htmlspecialchars($jurVal->nomor_pendaftar, ENT_QUOTES, 'UTF-8');
-            $temp[] = '<div class="uppercase">'.htmlspecialchars($jurVal->nama_lengkap, ENT_QUOTES).'</div>';
+            $temp[] = '<div class="uppercase">' . htmlspecialchars($jurVal->nama_lengkap, ENT_QUOTES) . '</div>';
+            $temp[] = htmlspecialchars($jurVal->nik, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->nisn, ENT_QUOTES, 'UTF-8');
-            $temp[] = htmlspecialchars($jurVal->tempat_lahir.', '.tanggal($jurVal->tanggal_lahir), ENT_QUOTES, 'UTF-8');
+            $temp[] = htmlspecialchars($jurVal->tempat_lahir . ', ' . tanggal($jurVal->tanggal_lahir), ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->jenis_kelamin, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->agama, ENT_QUOTES, 'UTF-8');
-            $temp[] = '<div class="uppercase">'.htmlspecialchars($jurVal->kewarganegaraan, ENT_QUOTES, 'UTF-8').'</div>';
+            $temp[] = '<div class="uppercase">' . htmlspecialchars($jurVal->kewarganegaraan, ENT_QUOTES, 'UTF-8') . '</div>';
             $temp[] = htmlspecialchars($jurVal->no_telp, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->alamat, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->nama_jurusan, ENT_QUOTES, 'UTF-8');
-                        $temp[] = htmlspecialchars($jurVal->class_name, ENT_QUOTES, 'UTF-8');
+            $temp[] = htmlspecialchars($jurVal->class_name, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->ayah_kandung, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->pekerjaan_ayah, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->ibu_kandung, ENT_QUOTES, 'UTF-8');
@@ -50,22 +52,22 @@ class Akl extends MY_Controller {
             $temp[] = htmlspecialchars($jurVal->tahun_lulus, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->nilai, ENT_QUOTES, 'UTF-8');
             $temp[] = htmlspecialchars($jurVal->jalur, ENT_QUOTES, 'UTF-8');
-            
+
             // if(!$jurVal->file == NULL){
 
             //     $temp[] = '<p><i class="glyphicon glyphicon-ok" style="color:#009B29"></i> Sudah Upload</p>';
             // }else{
             //     $temp[] = '<p><i class="glyphicon glyphicon-remove" style="color:#FF3D00"></i> Belum Upload</p>';
             // }
-            
+
             $temp[] = '
-            <a href="'.site_url('admin/psb/u/berkas/').$jurVal->acc_id.'" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit">
+            <a href="' . site_url('admin/psb/u/berkas/') . $jurVal->acc_id . '" class="btn btn-default btn-sm" data-toggle="tooltip" title="Edit">
                 <i class="glyphicon glyphicon-pencil" style="color:#FFBE00"></i>
             </a>
-            <a href="'.site_url('admin/psb/detail/').$jurVal->acc_id.'" class="btn btn-default btn-sm" data-toggle="tooltip" title="Detail" target="">
+            <a href="' . site_url('admin/psb/detail/') . $jurVal->acc_id . '" class="btn btn-default btn-sm" data-toggle="tooltip" title="Detail" target="">
                 <i class="glyphicon glyphicon-eye-open" style="color:#009B29"></i>
             </a>
-            <a href="javascript:void(0)" onclick="delete_psb('."'".$jurVal->acc_id."'".')" class="btn btn-default btn-sm" data-toggle="tooltip" title="Hapus">
+            <a href="javascript:void(0)" onclick="delete_psb(' . "'" . $jurVal->acc_id . "'" . ')" class="btn btn-default btn-sm" data-toggle="tooltip" title="Hapus">
                 <i class="glyphicon glyphicon-trash" style="color:#FF2700"></i>
             </a>
            ';
@@ -79,8 +81,6 @@ class Akl extends MY_Controller {
 
         echo json_encode($output);
     }
-    
-
 }
 
 /* End of file Akl.php */

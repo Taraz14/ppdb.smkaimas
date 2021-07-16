@@ -221,111 +221,158 @@
 
                                     $cari2x = $cari2->row();
                                     if ($cari2x->cadangkan == 1 && $cari3->num_rows() > 0) {
-                                        foreach ($cari3->result() as $cadang) {
-                                        }
-                                    } else {
-                                    }
-                                    foreach ($cari2->result() as $val) :
-            ?>
-                    <table class="table table-bordered">
-                        <tr style="color:white;">
-                            <!-- <th>Data Orangtua</th> -->
-                            <td class="text-center" style="background-color:#719AFF;" colspan="2"><strong>Data Pribadi</strong></td>
-                        </tr>
-                        <tr>
-                            <th>Nomor Pendaftar</th>
-                            <td><strong><?php gaskan($val->nomor_pendaftar) ?></strong></td>
-                        </tr>
-                        <tr>
-                            <th>Nama Lengkap</th>
-                            <td class="uppercase"><?php gaskan($val->nama_lengkap); ?></td>
-                        </tr>
-                        <tr>
-                            <th>NISN</th>
-                            <td><?php gaskan($val->nisn); ?></td>
-                        </tr>
+                                        foreach ($cari3->result() as $cadang) { ?>
+                        <table class="table table-bordered">
+                            <tr style="color:white;">
+                                <!-- <th>Data Orangtua</th> -->
+                                <td class="text-center" style="background-color:#719AFF;" colspan="2"><strong>Data Pribadi</strong></td>
+                            </tr>
+                            <tr>
+                                <th>Nomor Pendaftar</th>
+                                <td><strong><?php gaskan($cadang->nomor_pendaftar) ?></strong></td>
+                            </tr>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <td class="uppercase"><?php gaskan($cadang->nama_lengkap); ?></td>
+                            </tr>
+                            <tr>
+                                <th>NISN</th>
+                                <td><?php gaskan($cadang->nisn); ?></td>
+                            </tr>
 
-                        <tr>
-                            <th>Tanggal Lahir</th>
-                            <td><?php gaskan(tanggal($val->tanggal_lahir)); ?></td>
-                        </tr>
-                        <tr>
-                            <th>Jenis Kelamin</th>
-                            <td><?php gaskan($val->jenis_kelamin); ?></td>
-                        </tr>
-                        <tr>
-                            <th>Jurusan Yang Dipilih</th>
-                            <td><b><?php gaskan($val->jurusan1); ?></b></td>
-                        </tr>
+                            <tr>
+                                <th>Tanggal Lahir</th>
+                                <td><?php gaskan(tanggal($cadang->tanggal_lahir)); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Jenis Kelamin</th>
+                                <td><?php gaskan($cadang->jenis_kelamin); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Jurusan Yang Dipilih</th>
+                                <td><b><?php gaskan($cadang->jurusan1); ?></b></td>
+                            </tr>
 
-                        <tr>
-                            <th>No. Telp. </th>
-                            <td><?= empty($val->no_telp) ? '-' : $val->no_telp; ?></td>
-                        </tr>
-                        <tr>
-                            <th>Link Ujian Seleksi </th>
-                            <td>
-                                <?php
-                                        if ($val->jurusan1 == "Akuntansi dan Keuangan Lembaga") {
-                                            if (!empty($val->nilai)) {
-                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
-                                            } else {
-                                                echo "<a href='https://forms.gle/kfj3QVPiw22JT9KTA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
-                                            }
-                                        }
-                                        if ($val->jurusan1 == "Otomatisasi dan Tata Kelola Perkantoran") {
-                                            if (!empty($val->nilai)) {
-                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
-                                            } else {
-                                                echo "<a href='https://forms.gle/hYwZV18TPzw45eEH9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
-                                            }
-                                        }
-                                        if ($val->jurusan1 == "Desain Pemodelan dan Informasi Bangunan") {
-                                            if (!empty($val->nilai)) {
-                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
-                                            } else {
-                                                echo "<a href='https://forms.gle/UBe6ab7ALRFjARCR9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
-                                            }
-                                        }
-                                        if ($val->jurusan1 == "Teknik Komputer dan Jaringan") {
-                                            if (!empty($val->nilai)) {
-                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
-                                            } else {
-
-                                                echo "<a href='https://forms.gle/XnDJjJShHuxpPMfWA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
-                                            }
-                                        }
-                                        if ($val->jurusan1 == "Teknik Kendaraan Ringan Otomotif") {
-                                            if (!empty($val->nilai)) {
-                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
-                                            } else {
-                                                echo "<a href='https://forms.gle/a9wygs1T9nopM5729' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
-                                            }
-                                        }
-                                        if ($val->jurusan1 == "Teknik Instalasi Tenaga Listrik") {
-                                            if (!empty($val->nilai)) {
-                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
-                                            } else {
-                                                echo "<a href='https://forms.gle/RhekyP52K6suz6uh9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
-                                            }
-                                        }
-                                        if ($val->jurusan1 == "Teknik dan Bisnis Sepeda Motor") {
-                                            if (!empty($val->nilai)) {
-                                                echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
-                                            } else {
-                                                echo "<a href='https://forms.gle/AMpYsqU4QDYqCARZ9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
-                                            }
-                                        }
-                                ?>
-                            </td>
-                        </tr>
-                        <!-- <tr>
+                            <tr>
+                                <th>No. Telp. </th>
+                                <td><?= empty($cadang->no_telp) ? '-' : $cadang->no_telp; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Status </th>
+                                <td class="text-center" style="background-color:#FECB10 ;">
+                                    <b>Cadangan</b>
+                                </td>
+                            </tr>
+                            <!-- <tr>
                                 <td colspan="2">
                                     <p align="justify"><i>*Bagi yang dinyatakan <b style="color:#4C9BD3">Diterima/Lulus</b> hasil seleksi, diharapkan datang ke sekolah untuk mengambil Surat Pernyataan dan Rincian Biaya dengan menggunakan Seragam SMP/MTs serta menggunakan Standar Protokol Kesehatan yang sudah ditetapkan Pemerintah.</i></p>
                                 </td>
                             </tr> -->
 
-                    </table>
+                        </table>
+                    <?php }
+                                    } else {
+                                        foreach ($cari2->result() as $val) :
+                    ?>
+                        <table class="table table-bordered">
+                            <tr style="color:white;">
+                                <!-- <th>Data Orangtua</th> -->
+                                <td class="text-center" style="background-color:#719AFF;" colspan="2"><strong>Data Pribadi</strong></td>
+                            </tr>
+                            <tr>
+                                <th>Nomor Pendaftar</th>
+                                <td><strong><?php gaskan($val->nomor_pendaftar) ?></strong></td>
+                            </tr>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <td class="uppercase"><?php gaskan($val->nama_lengkap); ?></td>
+                            </tr>
+                            <tr>
+                                <th>NISN</th>
+                                <td><?php gaskan($val->nisn); ?></td>
+                            </tr>
+
+                            <tr>
+                                <th>Tanggal Lahir</th>
+                                <td><?php gaskan(tanggal($val->tanggal_lahir)); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Jenis Kelamin</th>
+                                <td><?php gaskan($val->jenis_kelamin); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Jurusan Yang Dipilih</th>
+                                <td><b><?php gaskan($val->jurusan1); ?></b></td>
+                            </tr>
+
+                            <tr>
+                                <th>No. Telp. </th>
+                                <td><?= empty($val->no_telp) ? '-' : $val->no_telp; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Link Ujian Seleksi </th>
+                                <td>
+                                    <?php
+                                            if ($val->jurusan1 == "Akuntansi dan Keuangan Lembaga") {
+                                                if (!empty($val->nilai)) {
+                                                    echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                                } else {
+                                                    echo "<a href='https://forms.gle/kfj3QVPiw22JT9KTA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                                }
+                                            }
+                                            if ($val->jurusan1 == "Otomatisasi dan Tata Kelola Perkantoran") {
+                                                if (!empty($val->nilai)) {
+                                                    echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                                } else {
+                                                    echo "<a href='https://forms.gle/hYwZV18TPzw45eEH9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                                }
+                                            }
+                                            if ($val->jurusan1 == "Desain Pemodelan dan Informasi Bangunan") {
+                                                if (!empty($val->nilai)) {
+                                                    echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                                } else {
+                                                    echo "<a href='https://forms.gle/UBe6ab7ALRFjARCR9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                                }
+                                            }
+                                            if ($val->jurusan1 == "Teknik Komputer dan Jaringan") {
+                                                if (!empty($val->nilai)) {
+                                                    echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                                } else {
+
+                                                    echo "<a href='https://forms.gle/XnDJjJShHuxpPMfWA' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                                }
+                                            }
+                                            if ($val->jurusan1 == "Teknik Kendaraan Ringan Otomotif") {
+                                                if (!empty($val->nilai)) {
+                                                    echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                                } else {
+                                                    echo "<a href='https://forms.gle/a9wygs1T9nopM5729' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                                }
+                                            }
+                                            if ($val->jurusan1 == "Teknik Instalasi Tenaga Listrik") {
+                                                if (!empty($val->nilai)) {
+                                                    echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                                } else {
+                                                    echo "<a href='https://forms.gle/RhekyP52K6suz6uh9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                                }
+                                            }
+                                            if ($val->jurusan1 == "Teknik dan Bisnis Sepeda Motor") {
+                                                if (!empty($val->nilai)) {
+                                                    echo "<button class='btn bg-maroon btn-flat margin' disabled>Sudah Mengikuti Ujian Tes Seleksi</button>";
+                                                } else {
+                                                    echo "<a href='https://forms.gle/AMpYsqU4QDYqCARZ9' class='btn bg-navy btn-flat margin'>Mulai Ujian Tes Seleksi</a>";
+                                                }
+                                            }
+                                    ?>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                                        <td colspan="2">
+                                                            <p align="justify"><i>*Bagi yang dinyatakan <b style="color:#4C9BD3">Diterima/Lulus</b> hasil seleksi, diharapkan datang ke sekolah untuk mengambil Surat Pernyataan dan Rincian Biaya dengan menggunakan Seragam SMP/MTs serta menggunakan Standar Protokol Kesehatan yang sudah ditetapkan Pemerintah.</i></p>
+                                                        </td>
+                                                    </tr> -->
+
+                        </table>
                 </div>
             </div>
         </div>
@@ -392,14 +439,15 @@
                         </tr>
                     </table>
 
-        <?php
-                                    endforeach;
+    <?php
+                                        endforeach;
+                                    }
                                 }
                             }
                         } else { ?>
-        <div class="form-group">
-            <label class="col-sm-8 control-label"> Harap isi NISN! </label>
-        </div>
+    <div class="form-group">
+        <label class="col-sm-8 control-label"> Harap isi NISN! </label>
+    </div>
                 </div>
             </div>
         <?php } ?>

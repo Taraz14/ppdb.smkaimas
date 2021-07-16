@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 
 <!-- Main content -->
 <section class="content">
@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="box box-success">
                 <div class="box-header">
-                    <h3 class="box-title">PPDB(2020) | 
+                    <h3 class="box-title">PPDB(2020) |
                         <small>List Siswa Jurusan <?= $header; ?></small>
                     </h3>
                 </div>
@@ -16,7 +16,8 @@
                             <tr>
                                 <th>No. Pendaftar</th>
                                 <th>Nama Lengkap</th>
-                                <th>NISN</th> 
+                                <th>NIK</th>
+                                <th>NISN</th>
                                 <th>TTL</th>
                                 <th>Jenis Kelamin</th>
                                 <th>Agama</th>
@@ -52,27 +53,25 @@
 <!-- /.content -->
 
 <script>
-  var tkj_admin;
-  $(function(){
+    var tkj_admin;
+    $(function() {
         //Datatable : AKL -> Admin
         tkj_admin = $('#tkj_admin').DataTable({
-        "processing"  : true,
-        "serverSide"  : true,
-        "scrollX"       : true,
-        // "scrollY"       : "200px",
-        "scrollCollapse": true,
-        "order"       : [],
-        "ajax"        : {
-          url         : '<?= site_url('admin/perJurusan/Tkj/getJur')?>',
-        },
-        "columnDefs" : [
-            {
-                "targets" : [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
-                "visible" : false,
-                "searchable" : false
-            }
-        ],
-        dom: 'lBfrtip',
+            "processing": true,
+            "serverSide": true,
+            "scrollX": true,
+            // "scrollY"       : "200px",
+            "scrollCollapse": true,
+            "order": [],
+            "ajax": {
+                url: '<?= site_url('admin/perJurusan/Tkj/getJur') ?>',
+            },
+            "columnDefs": [{
+                "targets": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+                "visible": false,
+                "searchable": false
+            }],
+            dom: 'lBfrtip',
             button: [{
                     extend: 'pdfHtml5',
                     oriented: 'potrait',
@@ -82,31 +81,31 @@
 
                 'csv', 'excel', 'print', 'copy'
             ],
-             pageLength: 10,
+            pageLength: 10,
             lengthMenu: [10, 20, 50, 100, 200, 500],
-      });
-  })
+        });
+    })
 
-//   function reload_table()
-//     {
-//       psb_admin.ajax.reload(null,false); //reload datatable ajax 
-//     }
+    //   function reload_table()
+    //     {
+    //       psb_admin.ajax.reload(null,false); //reload datatable ajax 
+    //     }
 
-//     function delete_psb(id){
-//       if(confirm('Yakin Hapus Pendaftar?')){
-//         $.ajax({
-//           url : "<?= site_url('admin/psb/d/')?>"+id,
-//           type : "POST",
-//           dataType : "JSON",
-//           success : function(data) {
-//             reload_table();
-//           },
-//           error: function (jqXHR, textStatus, errorThrown)
-//           {
-//               alert('Gagal dihapus');
-//           }
+    //     function delete_psb(id){
+    //       if(confirm('Yakin Hapus Pendaftar?')){
+    //         $.ajax({
+    //           url : "<?= site_url('admin/psb/d/') ?>"+id,
+    //           type : "POST",
+    //           dataType : "JSON",
+    //           success : function(data) {
+    //             reload_table();
+    //           },
+    //           error: function (jqXHR, textStatus, errorThrown)
+    //           {
+    //               alert('Gagal dihapus');
+    //           }
 
-//         });
-//       }
-//     }
+    //         });
+    //       }
+    //     }
 </script>

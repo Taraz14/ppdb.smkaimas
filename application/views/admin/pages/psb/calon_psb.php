@@ -12,11 +12,17 @@
         </div>
         <div class="box-body pad">
           <table class="table table-bordered table-hover display nowrap" width="100%" id="arsip">
+            <ul>
+              <li style="color:red">Nomor Pendaftar dan Nama berwarna merah adalah siswa cadangan</li>
+              <li style="color:blue">Nomor Pendaftar dan Nama berwarna biru adalah siswa yang sudah diterima</li>
+            </ul>
+            <hr />
             <thead>
               <tr>
                 <th>#</th>
                 <th>No. Pendaftar</th>
                 <th>Nama Lengkap</th>
+                <th>NIK</th>
                 <th>NISN</th>
                 <th>TTL</th>
                 <th>Jenis Kelamin</th>
