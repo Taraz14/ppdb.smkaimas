@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <li class="treeview  <?php if ($this->uri->segment(2) == 'berita') {
                                 echo 'active' . ' menu-open';
                               } ?>">
-          <a href="#"><i class="glyphicon glyphicon-bullhorn"></i> <span>Acara</span>
+          <a href="#"><i class="glyphicon glyphicon-bullhorn"></i> <span>Berita Acara</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -148,7 +148,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <li class="treeview  <?php if ($this->uri->segment(2) == 'berita') {
                                 echo 'active' . ' menu-open';
                               } ?>">
-          <a href="#"><i class="fa fa-stars "></i> <span>Acara</span>
+          <a href="#"><i class="fa fa-stars "></i> <span>Berita Acara</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

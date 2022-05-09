@@ -12,11 +12,17 @@
         </div>
         <div class="box-body pad">
           <table class="table table-bordered table-hover display nowrap" width="100%" id="arsip">
-            <ul>
-              <li style="color:red">Nomor Pendaftar dan Nama berwarna merah adalah siswa cadangan</li>
-              <li style="color:blue">Nomor Pendaftar dan Nama berwarna biru adalah siswa yang sudah diterima</li>
-            </ul>
-            <hr />
+            <div class="col-lg-12 row">
+              <div class="col-lg-10">
+                <ul>
+                  <li style="color:red">Nomor Pendaftar dan Nama berwarna merah adalah siswa cadangan</li>
+                  <li style="color:blue">Nomor Pendaftar dan Nama berwarna biru adalah siswa yang sudah diterima</li>
+              </div>
+              <div class="col-lg-2 text-right">
+                <button class="btn btn-warning"><i class="fa fa-archive"></i> Arsipkan</button>
+              </div>
+              </ul>
+            </div>
             <thead>
               <tr>
                 <th>#</th>

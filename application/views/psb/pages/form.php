@@ -17,7 +17,7 @@ if ($bt->bool == 1) :
         $input['agama'] = '';
         $input['kewarganegaraan'] = '';
         $input['jurusan1'] = '';
-        // $input['jurusan2'] = '';
+        $input['jurusan2'] = '';
         //========
         $input['no_telp'] = '';
         $input['alamat'] = '';
@@ -187,7 +187,7 @@ if ($bt->bool == 1) :
                 </div>
             </div>
             <div class="form-group row mt-2">
-                <label for="prov" class="col-sm-4 control-label">| Kecamatan/Kabupaten/Provinsi <sup style="color:#F53F37">*</sup></label>
+                <label for="prov" class="col-sm-4 control-label">| Kecamatan, Kabupaten, Provinsi <sup style="color:#F53F37">*</sup></label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" name="prov" value="<?= $input['prov']; ?>" placeholder="Kecamatan, Kabupaten, Provinsi" autocomplete="off">
                     <div class="text-danger text-muted"><i><?php echo form_error('prov') ?></i></div>
@@ -225,36 +225,36 @@ if ($bt->bool == 1) :
                     <div class="text-danger text-muted"><i><?php echo form_error('jurusan1') ?></i></div>
                 </div>
             </div>
-            <!-- <div class="form-group row mt-2">
-            <label for="jurusan2" class="col-sm-4 control-label">| Pilih Jurusan 2 <sup style="color:#F53F37">*</sup></label>
-            <div class="col-sm-8">
-                <select class="form-control" name="jurusan2" style="font-size:14.5px;">
-                    <option value="" hidden>--Jurusan 2--</option>
-                    <option <?php if ($input['jurusan2'] == 'Akuntansi Keuangan Lembaga') {
-                                echo 'selected';
-                            } ?> value="Akuntansi Keuangan Lembaga">Akuntansi Keuangan Lembaga</option>
-                    <option <?php if ($input['jurusan2'] == 'Otomatisasi Tata Kelola Perkantoran') {
-                                echo 'selected';
-                            } ?> value="Otomatisasi Tata Kelola Perkantoran">Otomatisasi Tata Kelola Perkantoran</option>
-                    <option <?php if ($input['jurusan2'] == 'Desain Pemodelan dan Informasi Bangunan') {
-                                echo 'selected';
-                            } ?> value="Desain Pemodelan dan Informasi Bangunan">Desain Pemodelan dan Informasi Bangunan</option>
-                    <option <?php if ($input['jurusan2'] == 'Teknik Komputer dan Jaringan') {
-                                echo 'selected';
-                            } ?> value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
-                    <option <?php if ($input['jurusan2'] == 'Teknik Kendaraan Ringan Otomotif') {
-                                echo 'selected';
-                            } ?> value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
-                    <option <?php if ($input['jurusan2'] == 'Teknik Instalasi Tenaga Listrik') {
-                                echo 'selected';
-                            } ?> value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
-                    <option <?php if ($input['jurusan2'] == 'Teknik dan Bisnis Sepeda Motor') {
-                                echo 'selected';
-                            } ?> value="Teknik dan Bisnis Sepeda Motor">Teknik dan Bisnis Sepeda Motor</option>
-                </select>
-                <div class="text-danger text-muted"><i><?php echo form_error('jurusan2') ?></i></div>
+            <div class="form-group row mt-2">
+                <label for="jurusan2" class="col-sm-4 control-label">| Pilih Jurusan 2 <sup style="color:#F53F37">*</sup></label>
+                <div class="col-sm-8">
+                    <select class="form-control" name="jurusan2" style="font-size:14.5px;">
+                        <option value="" hidden>--Jurusan 2--</option>
+                        <option <?php if ($input['jurusan2'] == 'Akuntansi Keuangan Lembaga') {
+                                    echo 'selected';
+                                } ?> value="Akuntansi Keuangan Lembaga">Akuntansi Keuangan Lembaga</option>
+                        <option <?php if ($input['jurusan2'] == 'Otomatisasi Tata Kelola Perkantoran') {
+                                    echo 'selected';
+                                } ?> value="Otomatisasi Tata Kelola Perkantoran">Otomatisasi Tata Kelola Perkantoran</option>
+                        <option <?php if ($input['jurusan2'] == 'Desain Pemodelan dan Informasi Bangunan') {
+                                    echo 'selected';
+                                } ?> value="Desain Pemodelan dan Informasi Bangunan">Desain Pemodelan dan Informasi Bangunan</option>
+                        <option <?php if ($input['jurusan2'] == 'Teknik Komputer dan Jaringan') {
+                                    echo 'selected';
+                                } ?> value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                        <option <?php if ($input['jurusan2'] == 'Teknik Kendaraan Ringan Otomotif') {
+                                    echo 'selected';
+                                } ?> value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
+                        <option <?php if ($input['jurusan2'] == 'Teknik Instalasi Tenaga Listrik') {
+                                    echo 'selected';
+                                } ?> value="Teknik Instalasi Tenaga Listrik">Teknik Instalasi Tenaga Listrik</option>
+                        <option <?php if ($input['jurusan2'] == 'Teknik dan Bisnis Sepeda Motor') {
+                                    echo 'selected';
+                                } ?> value="Teknik dan Bisnis Sepeda Motor">Teknik dan Bisnis Sepeda Motor</option>
+                    </select>
+                    <div class="text-danger text-muted"><i><?php echo form_error('jurusan2') ?></i></div>
+                </div>
             </div>
-        </div> -->
             <h2>Data Orang Tua</h2>
             <hr>
             <div class="form-group row mt-2">
