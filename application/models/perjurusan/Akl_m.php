@@ -11,7 +11,7 @@ class Akl_m extends MY_Model
         $this->db->from($this->acc . ' a');
         $this->db->join('jurusan j', 'a.kode_jurusan = j.kode_jurusan');
         $this->db->join('kelas k', 'a.class_id = k.class_id');
-                $this->db->join('jalur_daftar jd', 'a.id_jalur = jd.id_jalur');
+        $this->db->join('jalur_daftar jd', 'a.id_jalur = jd.id_jalur');
 
         $this->db->where('a.kode_jurusan', 1);
 

@@ -11,7 +11,7 @@
                     </h3>
                 </div>
                 <div class="box-body pad">
-                    <table class="table table-bordered table-hover display nowrap" width="100%" id="arsip">
+                    <table class="table table-bordered table-hover display nowrap" width="100%" id="acc">
                         <thead>
                             <tr>
                                 <th>No. Pendaftar</th>
@@ -51,15 +51,11 @@
 </section>
 <!-- /.content -->
 <script>
-    var tahun = <?= $this->uri->segment(5) ?>;
-    var arsip;
-    if (tahun == 2020) {
-        var link = '<?= site_url('admin/arsip/getArsip_lama/') ?>'
-    } else {
-        var link = '<?= site_url('admin/arsip/getArsip/') ?>' + tahun;
-    }
+    var tahun = <?= $this->uri->segment(3) ?>;
+    var acc;
+
     $(function() {
-        arsip = $('#arsip').DataTable({
+        acc = $('#acc').DataTable({
             "processing": true,
             "serverSide": true,
             "scrollX": true,
@@ -67,10 +63,10 @@
             "scrollCollapse": true,
             "order": [],
             "ajax": {
-                url: link,
+                url: '<?= site_url('admin/acceptedArchive/getArsip/') ?>' + tahun,
             },
             "columnDefs": [{
-                "targets": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+                "targets": [3, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24],
                 "visible": false,
                 "searchable": false
             }],

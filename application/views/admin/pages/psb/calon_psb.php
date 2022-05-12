@@ -19,7 +19,7 @@
                   <li style="color:blue">Nomor Pendaftar dan Nama berwarna biru adalah siswa yang sudah diterima</li>
               </div>
               <div class="col-lg-2 text-right">
-                <button class="btn btn-warning"><i class="fa fa-archive"></i> Arsipkan</button>
+                <a href="javscript:void(0)" onclick="arsipkan()" class="btn btn-warning"><i class="fa fa-archive"></i> Arsipkan</a>
               </div>
               </ul>
             </div>
@@ -105,6 +105,52 @@
     });
   })
 
+  function arsipkan() {
+    swal({
+        title: "Arsipkan pendaftar ?",
+        text: "Pendaftar akan diarsipkan!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((result) => {
+        if (result) {
+          // var uid = new FormData($('#form-user')[0]);
+          $.ajax({
+            url: "<?= site_url('admin/archive'); ?>",
+            // type: "POST",
+            contentType: false,
+            processData: false,
+            dataType: "JSON",
+            // data: {
+            //   id: id,
+            //   uid: uid
+            // },
+            success: function(data) {
+              if (data.status == true) {
+                swal("Sip! Pendaftar Berhasil diarsipkan!", {
+                  icon: "success",
+                });
+                reload_table();
+              } else if (data.status == false) {
+                swal({
+                  title: 'Gagal',
+                  text: 'Pendaftar gagal dicadangkan',
+                  icon: 'error',
+                  dangerMode: 'true'
+                })
+                reload_table();
+              }
+            }
+          });
+        } else {
+          console.log(id);
+          console.log(uid);
+          swal("Kelas tidak jadi dihapus!");
+        }
+      });
+  }
+
   function cadangkan(id) {
     swal({
         title: "Cadangkan siswa ini?",
@@ -135,7 +181,7 @@
               } else if (data.status == false) {
                 swal({
                   title: 'Gagal',
-                  text: 'Siswa ini sudah dicadangkan',
+                  text: 'Siswa ini gagal dicadangkan',
                   icon: 'error',
                   dangerMode: 'true'
                 })

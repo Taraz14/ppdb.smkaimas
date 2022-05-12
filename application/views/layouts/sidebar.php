@@ -116,6 +116,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <li class="<?php if ($this->uri->segment(2) == 'arsip') {
                       echo 'active';
                     } ?>"><a href="<?= site_url('admin/arsip') ?>"><i class="fa fa-files-o"></i><span> Arsip Pendaftar</span></a></li>
+        <li class="<?php if ($this->uri->segment(2) == 'archive-accepted') {
+                      echo 'active';
+                    } ?>"><a href="<?= site_url('admin/archive-accepted') ?>"><i class="fa fa-files-o"></i><span> Arsip Siswa Diterima</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     <?php } ?>

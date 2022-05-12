@@ -25,7 +25,7 @@
         <div class="box-body">
           <div class="row">
             <!-- /.col -->
-            <a href="<?= site_url('admin/psb/arsip/data') ?>">
+            <a href="<?= site_url('admin/psb/arsip/data/') . '2020' ?>">
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box" style="background-color:#D5E799 ;">
                   <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
@@ -41,22 +41,23 @@
               <!-- /.col -->
             </a>
 
-            <a href="#">
-              <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="info-box" style="background-color:#D5E799 ;">
-                  <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
+            <?php foreach ($arsip_year->result() as $val) : ?>
+              <a href="<?= site_url('admin/psb/arsip/data/') . $val->tahun_submit ?>">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="info-box" style="background-color:#D5E799 ;">
+                    <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
 
-                  <div class="info-box-content">
-                    <span class="info-box-text">Tahun</span>
-                    <span class="info-box-number"></span>
+                    <div class="info-box-content">
+                      <span class="info-box-text">Tahun</span>
+                      <span class="info-box-number"><?= $val->tahun_submit ?></span>
+                    </div>
+                    <!-- /.info-box-content -->
                   </div>
-                  <!-- /.info-box-content -->
+                  <!-- /.info-box -->
                 </div>
-                <!-- /.info-box -->
-              </div>
-              <!-- /.col -->
-            </a>
-
+                <!-- /.col -->
+              </a>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>

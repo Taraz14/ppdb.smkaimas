@@ -18,7 +18,9 @@
               <label for="addkelas" class="col-sm-2 control-label">Nama Kelas</label>
               <div class="col-sm-4">
                 <input type="text" name="addkelas" class="form-control" placeholder="contoh : X TKJ 1">
+                <small class="text-muted"><i>Contoh penulisan : X TKJ 1</i></small>
                 <div class="text-danger text-muted"><i><?php echo form_error('addkelas') ?></i></div>
+
               </div>
               <div class="col-sm-2">
                 <a class="btn btn-success btn-sm" id="save">Simpan <i class="glyphicon glyphicon-blackboard"></i></a>

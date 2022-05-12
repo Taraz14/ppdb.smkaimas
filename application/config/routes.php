@@ -17,6 +17,10 @@ $route['admin/berita/d/(:any)'] = 'admin/Forum/delete/$1';
 $route['admin/aktivasi'] = 'admin/Active';
 $route['admin/kelas'] = 'admin/kelas/kelas';
 $route['admin/cadangkan/(:any)'] = 'admin/cadangan/index/$1';
+$route['admin/archive'] = 'admin/psb/psb_archive';
+$route['admin/archive-accepted'] = 'admin/AcceptedArchive';
+$route['admin/archive-diterima/(:any)'] = 'admin/AcceptedArchive/diterima/$1';
+
 
 //PPDB
 $route['admin/psb'] = 'admin/Psb';
@@ -26,7 +30,8 @@ $route['admin/psb/u/nilai/(:any)'] = 'admin/Psb/updateNilai/$1';
 $route['admin/psb/d/(:any)'] = 'admin/psb/delete/$1';
 $route['admin/psb/acc'] = 'admin/Accept';
 $route['admin/psb/arsip'] = 'admin/arsip';
-$route['admin/psb/arsip/data'] = 'admin/arsip/arsip_detail';
+$route['admin/psb/arsip/data/(:any)'] = 'admin/arsip/arsip_detail/$1';
+$route['admin/arsip/accepted'] = '';
 
 //Jurusan
 $route['admin/psb/jurusan/akl'] = 'admin/perJurusan/Akl';
@@ -62,6 +67,7 @@ $route['daftar/print'] = 'psb/Pendaftaran/print';
 $route['hasil-seleksi'] = 'psb/hasil_seleksi';
 $route['pencarian-data'] = 'psb/Pencarian';
 $route['update-test'] = 'psb/Pencarian/UpdateTest';
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -13,9 +13,10 @@ class Psb extends MY_Controller
             'admin_m',
             'blog_m',
             'psb/pendaftar_m',
-            'psb/calon_psb_m',
+            'psb/arsip_psb_m',
             'admin/kelas_m',
-            'admin/jurusan_m'
+            'admin/jurusan_m',
+            'perjurusan/arsip_jurusan_m'
         ));
         $this->getJur = $this->sidebar_m->getJur();
         if (!$this->verify_role('admin')) redirect('auth');
@@ -31,7 +32,7 @@ class Psb extends MY_Controller
         $this->load->view('layouts/wrapper', [
             'content' => 'admin/pages/psb/calon_psb',
             'header' => 'List PPDB',
-            'getTahun' => $this->pendaftar_m->getTahun()
+            'getTahun' => $this->pendaftar_m->getTahun(),
         ]);
     }
 
@@ -247,6 +248,15 @@ class Psb extends MY_Controller
     public function delete($id)
     {
         $this->pendaftar_m->delete($id);
+        echo json_encode(array("status" => TRUE));
+    }
+
+    public function psb_archive()
+    {
+        $this->arsip_psb_m->archive();
+        $this->arsip_psb_m->trct_psb();
+        $this->arsip_jurusan_m->archiveGo();
+        $this->arsip_jurusan_m->trc_archiveGo();
         echo json_encode(array("status" => TRUE));
     }
 }
