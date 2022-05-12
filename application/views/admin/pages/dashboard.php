@@ -108,21 +108,17 @@
         <div class="box-body pad">
           <div class="row">
             <div class="col-xs-6">
-              <div class="info-box" style="background-color: #DD4B39;">
+              <div class="info-box" style="background-color: #DD4B39; color:white;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countAkl ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
                     <h3>
-                      <marquee>Akuntansi dan Keuangan Lembaga</marquee>
+                      <span>AKL</span>
                     </h3>
                   </span>
-                  <!-- <span class="info-box-number">41,410</span> -->
 
-                  <!-- <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                  </div> -->
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -130,24 +126,16 @@
             </div>
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box" style="background-color: #F39C12;">
+              <div class="info-box" style="background-color: #F39C12; color:white;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countOtkp ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
                     <h3>
-                      <marquee>Otomatisasi dan Tata Kelola Perkantoran</marquee>
+                      <span>OTKP</span>
                     </h3>
                   </span>
-                  <!-- <span class="info-box-number">41,410</span> -->
-
-                  <!-- <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                  </div>
-                  <span class="progress-description">
-                    70% Increase in 30 Days
-                  </span> -->
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -156,24 +144,17 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box" style="background-color: #00A65A;">
+              <div class="info-box" style="background-color: #00A65A; color:white;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countDpib ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
                     <h3>
-                      <marquee>Pemodelan dan Informasi Bangunan</marquee>
+                      <span>DPIB</span>
                     </h3>
                   </span>
-                  <!-- <span class="info-box-number">41,410</span> -->
-                  <!-- 
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                  </div>
-                  <span class="progress-description">
-                    70% Increase in 30 Days
-                  </span> -->
+
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -182,24 +163,17 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box" style="background-color: #605CA8;">
+              <div class="info-box" style="background-color: #605CA8; color:white;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTkj ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
                     <h3>
-                      <marquee>Teknik Komputer dan Jaringan</marquee>
+                      <span>TKJ</span>
                     </h3>
                   </span>
-                  <!-- <span class="info-box-number">41,410</span> -->
 
-                  <!-- <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                  </div>
-                  <span class="progress-description">
-                    70% Increase in 30 Days
-                  </span> -->
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -208,24 +182,17 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box" style="background-color: #0073B7;">
+              <div class="info-box" style="background-color: #0073B7; color:white;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTkro ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
                     <h3>
-                      <marquee>Teknik Kendaraan Ringan Otomotif</marquee>
+                      <span>TKRO</span>
                     </h3>
                   </span>
-                  <!-- <span class="info-box-number">41,410</span> -->
 
-                  <!-- <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                  </div>
-                  <span class="progress-description">
-                    70% Increase in 30 Days
-                  </span> -->
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -234,24 +201,17 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box" style="background-color: #8AA4AF;">
+              <div class="info-box" style="background-color: #8AA4AF; color:white;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTitl ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
                     <h3>
-                      <marquee>Teknik Instalasi Tenaga Listrik</marquee>
+                      <span>TITL</span>
                     </h3>
                   </span>
-                  <!-- <span class="info-box-number">41,410</span> -->
-                  <!-- 
-                  <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                  </div>
-                  <span class="progress-description">
-                    70% Increase in 30 Days
-                  </span> -->
+
                 </div>
                 <!-- /.info-box-content -->
               </div>
@@ -260,24 +220,17 @@
             <!-- /.col -->
             <!-- /.col -->
             <div class="col-xs-6">
-              <div class="info-box" style="background-color: #D81B60;">
+              <div class="info-box" style="background-color: #D81B60; color:white;">
                 <!-- <span class="info-box-icon"><i class="fa fa-accounting"></i></span> -->
                 <span class="info-box-icon"><?= $countTbsm ?></span>
 
                 <div class="info-box-content">
                   <span class="info-box-text">
                     <h3>
-                      <marquee>Teknik dan Bisnis Sepeda Motor</marquee>
+                      <span>TBSM</span>
                     </h3>
                   </span>
-                  <!-- <span class="info-box-number">41,410</span> -->
 
-                  <!-- <div class="progress">
-                    <div class="progress-bar" style="width: 70%"></div>
-                  </div> -->
-                  <!-- <span class="progress-description">
-                    70% Increase in 30 Days
-                  </span> -->
                 </div>
                 <!-- /.info-box-content -->
               </div>

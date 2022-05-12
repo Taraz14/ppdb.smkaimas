@@ -30,7 +30,7 @@ class AcceptedArchive extends MY_Controller
     public function diterima($tahun)
     {
         $this->load->view('layouts/wrapper', [
-            'content' => 'admin/pages/perjurusan/arsip_detail',
+            'content' => 'admin/pages/perJurusan/arsip_detail',
             'header' => 'Arsip Data',
             'tahun' => $tahun
         ], FALSE);

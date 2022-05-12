@@ -205,17 +205,9 @@
                             </td>
                         </tr>
                     </table>
-                    <!-- </div>
-            </div>
-        </div>
-        </div> -->
+
             <?php endforeach;
                                 } ?>
-
-            <!-- <div class="col-lg-5">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="col-md-12"> -->
 
             <?php if ($cari->num_rows() <= 0) {
 

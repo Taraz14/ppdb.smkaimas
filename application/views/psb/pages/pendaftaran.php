@@ -94,7 +94,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Selamat Datang di Halaman<br /><span>Penerimaan Peserta Didik Baru (PPDB) 2021</span></h1>
+                    <h1>Selamat Datang di Halaman<br /><span>Penerimaan Peserta Didik Baru (PPDB) <?= date('Y') ?></span></h1>
                 </div>
             </div>
         </div>

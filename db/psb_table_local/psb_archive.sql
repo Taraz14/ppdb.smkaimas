@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `psb_archive` (
   `no_telp` varchar(18) CHARACTER SET latin1 NOT NULL,
   `alamat` text CHARACTER SET latin1 NOT NULL,
   `jurusan1` varchar(100) CHARACTER SET latin1 NOT NULL,
+  `jurusan2` varchar(100) NOT NULL,
   `ayah_kandung` varchar(50) NOT NULL,
   `pekerjaan_ayah` varchar(255) NOT NULL,
   `ibu_kandung` varchar(100) CHARACTER SET latin1 NOT NULL,
